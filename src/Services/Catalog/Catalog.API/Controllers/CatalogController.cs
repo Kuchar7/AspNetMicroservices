@@ -32,7 +32,6 @@ namespace Catalog.API.Controllers
 
         [HttpGet("products/{id}")]
         [ProducesResponseType(typeof(IEnumerable<Product>), 200)]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProduct([FromRoute] string id)
         {
             var product = await _productRepository.GetProduct(id);

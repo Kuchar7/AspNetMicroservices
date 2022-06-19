@@ -1,10 +1,10 @@
-﻿using Discount.API.Entities;
+﻿using Dapper;
+using Discount.Grpc.Entities;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
 using System.Threading.Tasks;
-using Dapper;
 
-namespace Discount.API.Repositories
+namespace Discount.Grpc.Repositories
 {
     public class CouponRepository : ICouponRepository
     {
